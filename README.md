@@ -1,7 +1,7 @@
 # Monkeytype MCP
 
-[![npm version](https://img.shields.io/npm/v/monkeytype-mcp?logo=npm&label=npm)](https://www.npmjs.com/package/monkeytype-mcp)
-[![npm downloads](https://img.shields.io/npm/dm/monkeytype-mcp?logo=npm)](https://www.npmjs.com/package/monkeytype-mcp)
+[![npm version](https://img.shields.io/npm/v/monkeytype-mcp-server?logo=npm&label=npm)](https://www.npmjs.com/package/monkeytype-mcp-server)
+[![npm downloads](https://img.shields.io/npm/dm/monkeytype-mcp-server?logo=npm)](https://www.npmjs.com/package/monkeytype-mcp-server)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen?logo=node.js)](package.json)
 
@@ -59,7 +59,7 @@ The package runs on demand through `npx`; there is nothing to install globally.
 claude mcp add monkeytype \
   --env MONKEYTYPE_API_KEY=your_ape_key \
   --env MONKEYTYPE_USERNAME=your_username \
-  -- npx -y monkeytype-mcp
+  -- npx -y monkeytype-mcp-server
 ```
 
 **Claude Desktop** (`claude_desktop_config.json`)
@@ -69,7 +69,7 @@ claude mcp add monkeytype \
   "mcpServers": {
     "monkeytype": {
       "command": "npx",
-      "args": ["-y", "monkeytype-mcp"],
+      "args": ["-y", "monkeytype-mcp-server"],
       "env": {
         "MONKEYTYPE_API_KEY": "your_ape_key",
         "MONKEYTYPE_USERNAME": "your_username"
@@ -86,7 +86,7 @@ claude mcp add monkeytype \
   "mcpServers": {
     "monkeytype": {
       "command": "npx",
-      "args": ["-y", "monkeytype-mcp"],
+      "args": ["-y", "monkeytype-mcp-server"],
       "env": { "MONKEYTYPE_API_KEY": "your_ape_key" }
     }
   }
@@ -101,7 +101,7 @@ claude mcp add monkeytype \
     "monkeytype": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "monkeytype-mcp"],
+      "args": ["-y", "monkeytype-mcp-server"],
       "env": { "MONKEYTYPE_API_KEY": "your_ape_key" }
     }
   }
@@ -113,7 +113,7 @@ claude mcp add monkeytype \
 ```json
 {
   "command": "npx",
-  "args": ["-y", "monkeytype-mcp"],
+  "args": ["-y", "monkeytype-mcp-server"],
   "env": { "MONKEYTYPE_API_KEY": "your_ape_key" }
 }
 ```
@@ -121,7 +121,7 @@ claude mcp add monkeytype \
 Verify the connection before wiring it into a client:
 
 ```bash
-MONKEYTYPE_API_KEY=your_ape_key npx -y monkeytype-mcp --check
+MONKEYTYPE_API_KEY=your_ape_key npx -y monkeytype-mcp-server --check
 ```
 
 ## Tools
@@ -202,7 +202,7 @@ CLI flags mirror the transport settings: `--transport`, `--port`, `--host`, `--c
 For web clients or shared deployments, serve Streamable HTTP instead of stdio:
 
 ```bash
-MONKEYTYPE_API_KEY=your_ape_key npx -y monkeytype-mcp --transport http --port 8787
+MONKEYTYPE_API_KEY=your_ape_key npx -y monkeytype-mcp-server --transport http --port 8787
 ```
 
 - MCP endpoint: `POST http://127.0.0.1:8787/mcp` (stateless, JSON responses)
@@ -232,7 +232,7 @@ docker run -i --rm \
 The package exports the client, the tool registry and a transport-agnostic server factory:
 
 ```ts
-import { MonkeytypeClient, createServer, loadConfig } from "monkeytype-mcp";
+import { MonkeytypeClient, createServer, loadConfig } from "monkeytype-mcp-server";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
 const config = loadConfig({ ...process.env, MONKEYTYPE_API_KEY: "your_ape_key" });
@@ -284,7 +284,7 @@ Pull requests are welcome. Run `npm run lint && npm test && npm run build` befor
 | `403` on a specific tool              | The key is missing that scope. Re-create the ApeKey with the matching scope.                                              |
 | `422` with valid-looking arguments    | `mode`/`mode2` pairs are validated by Monkeytype (e.g. `time` accepts `15/30/60/120`).                                    |
 | `429 Rate limit reached`              | Monkeytype limits results to 60/hour (30/day with an ApeKey). The server retries automatically when `Retry-After` allows. |
-| Client can't find the server          | Run `npx -y monkeytype-mcp --check`; if that works, your client config likely has a stale cache — restart it.             |
+| Client can't find the server          | Run `npx -y monkeytype-mcp-server --check`; if that works, your client config likely has a stale cache — restart it.      |
 | Empty responses                       | Monkeytype returns empty arrays for “nothing yet” (e.g. no PSAs); that's a valid result, not a bug.                       |
 
 ## Legal

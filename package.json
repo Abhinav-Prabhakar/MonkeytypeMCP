@@ -1,5 +1,5 @@
 {
-  "name": "monkeytype-mcp",
+  "name": "monkeytype-mcp-server",
   "version": "2.0.0",
   "description": "Model Context Protocol server for the Monkeytype API: profiles, results, stats, leaderboards and more, for any MCP client.",
   "keywords": [

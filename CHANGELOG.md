@@ -28,6 +28,9 @@ registry.
 
 ### Changed
 
+- The npm package is now `monkeytype-mcp-server` (the `monkeytype-mcp` name
+  belongs to an npm account that is no longer accessible, so it is frozen at
+  1.0.10). The command is still `monkeytype-mcp`.
 - Endpoints moved to the current Monkeytype API (v2.5):
   - `check_username` → `GET /users/checkName/{name}`
   - `get_result_by_id` → `GET /results/id/{resultId}`
