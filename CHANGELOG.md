@@ -4,6 +4,14 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] — 2026-11-12
+
+- Point `mcpName` and the registry manifest at the correctly-cased GitHub
+  namespace (`io.github.Abhinav-Prabhakar/monkeytype-mcp`); the registry treats
+  the namespace as case-sensitive.
+
+No runtime changes.
+
 ## [2.0.0] — 2026-11-12
 
 A full rewrite of the server. The package now ships compiled TypeScript instead

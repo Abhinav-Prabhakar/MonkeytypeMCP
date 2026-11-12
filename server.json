@@ -1,19 +1,19 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.abhinav-prabhakar/monkeytype-mcp",
+  "name": "io.github.Abhinav-Prabhakar/monkeytype-mcp",
   "title": "Monkeytype",
   "description": "Monkeytype typing profiles, results, streaks, leaderboards and global stats for MCP clients.",
   "repository": {
     "url": "https://github.com/Abhinav-Prabhakar/MonkeytypeMCP",
     "source": "github"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "websiteUrl": "https://github.com/Abhinav-Prabhakar/MonkeytypeMCP",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "monkeytype-mcp-server",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "transport": {
         "type": "stdio"
       },

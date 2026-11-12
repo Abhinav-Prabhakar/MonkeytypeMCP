@@ -1,6 +1,6 @@
 {
   "name": "monkeytype-mcp-server",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Model Context Protocol server for the Monkeytype API: profiles, results, stats, leaderboards and more, for any MCP client.",
   "keywords": [
     "mcp",
@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "author": "Abhinav Prabhakar <85114885+Abhinav-Prabhakar@users.noreply.github.com>",
-  "mcpName": "io.github.abhinav-prabhakar/monkeytype-mcp",
+  "mcpName": "io.github.Abhinav-Prabhakar/monkeytype-mcp",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
