@@ -4,6 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/monkeytype-mcp-server?logo=npm)](https://www.npmjs.com/package/monkeytype-mcp-server)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen?logo=node.js)](package.json)
+[![Monkeytype MCP server](https://mcprush.com/badge/monkeytype-mcp/card.svg)](https://mcprush.com/to/monkeytype-mcp?ref=badge)
 
 **Ask your AI about your typing.**
 A Model Context Protocol server for [Monkeytype](https://monkeytype.com): profiles, personal bests, saved results, streaks, leaderboards and global stats — exposed as 22 typed tools for Claude, Cursor, VS Code, Windsurf, Zed, or any other MCP client.
